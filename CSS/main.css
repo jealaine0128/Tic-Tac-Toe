@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&display=swap');
+:root{
+    --bgcolor : #20262E;
+    --color1: #0ef;
+    --color2:#cd5888;
+    --color3: #E9e8e8;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--color3);
+}
+
+body{
+    background: var(--bgcolor);
+}
+
+
+.menucontainer{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.menucontainer .title{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: .5em;
+    letter-spacing: .3ch;
+}
+.tic{
+    font-size: 1em;
+    color: var(--color1);
+}
+.toe{
+    font-size: 1em;
+    color: var(--color2);
+}
+
+.menucontainer p{
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 1em;
+}
+.menucontainer > div{
+    display: flex;
+    flex-direction: column;
+}
+.menucontainer > div > button{
+    background: transparent;
+    color: var(--color2);
+
+    width: 50%;
+
+    padding: 1em;
+    border-radius: 2em;
+
+    margin: auto;
+    margin-bottom: .5em;
+}
+.menucontainer > div > button:hover{
+    border: 2px solid var(--color1);
+    color: var(--color1);
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+nav > button{
+    background: transparent;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.5em;
+    border: 0;
+    padding: .5em;
+    transition: all .5s ease;
+}
+nav > button:hover{
+    background: var(--color2);
+}
+
+.boardscene{
+    display: none;
+}
+.mainboard{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%
+}
+.mainboard > div{
+    height: 150px;
+    line-height: 175px;
+    text-align: center;
+    font-size: 7em;
+}
+.box:hover{
+    background:rgba(0, 0, 0, 0.596);
+    transition: all .5s ease;
+}
+.mainboard > div:nth-child(1),
+.mainboard > div:nth-child(2),
+.mainboard > div:nth-child(3),
+.mainboard > div:nth-child(4),
+.mainboard > div:nth-child(5),
+.mainboard > div:nth-child(6){
+    border-bottom: 5px solid var(--color1);
+}
+.mainboard > div:nth-child(2),
+.mainboard > div:nth-child(5),
+.mainboard > div:nth-child(8),
+.mainboard > div:nth-child(3),
+.mainboard > div:nth-child(6),
+.mainboard > div:nth-child(9){
+    border-left: 5px solid var(--color2);
+}
+
+.player1{
+    color: var(--color1);
+}
+.player2{
+    color: var(--color2);
+}
+
+
+.btns{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    translate: -50% -50%
+}
+.btns > button{
+    background: transparent;
+    padding: 1em;
+    width: 110px;
+    border-radius: 2em;
+    color: var(--color3);
+    font-family: 'Special Elite', cursive;
+}
+.btns > button:hover{
+    border: 1px solid var(--color2);
+    color: var(--color1);
+}
+
+
+
+.popup{
+    display: none;
+    width: 100vw;
+    height: 100dvh;
+    background: #000000a1;
+
+    position: absolute;
+    top: 0;
+}
+.popup .msg{
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: .5ch;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.popup p{
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+#reset{
+    margin: auto;
+}
+#prev, #next{
+    display: none;
+}
+
+button:disabled{
+    opacity: 0;
+}
+
+#historymodule{
+    display: none;
+    width: 100vw;
+    height: 100dvh;
+    background: #000000d3;
+
+    position: absolute;
+    top: 0;
+}
+.historycontainer{
+    position: relative;
+    width: 300px;
+    min-height: 100px;
+    border-radius: 1em;
+    border: 1px solid var(--color1);
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.historycontainer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    overflow: auto;
+}
+.historycontainer ul::-webkit-scrollbar{
+    width: .2em;
+}
+.historycontainer ul::-webkit-scrollbar-thumb{
+    background-color: var(--color2);
+}
+.historycontainer h1{
+    text-align: center;
+}
+.historycontainer ul > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.historycontainer button{
+    background: transparent;
+    padding: .5em;
+    border: 1px solid var(--color1);
+    border-radius: 1em;
+    font-family: 'Special Elite', cursive;
+}
+.historycontainer button:hover{
+    color: var(--color2);
+    border-color:var(--color2);
+}
+.btnclear{
+    font-family: 'Special Elite', cursive;
+
+    display: flex;
+    justify-content: center;
+}
+#clearhistory{
+    display: none;
+}
+.closebtn{
+    background: var(--bgcolor);
+    border: 1px solid var(--color1);
+    border-radius: 50%;
+    width: fit-content;
+    padding: .5em;
+    position: absolute;
+    top: 0;
+    right: 0 ;
+    translate: 50% -50%;
+}
+.closebtn:hover{
+    border: 1px solid var(--color2);
+    color: var(--color2);
+}

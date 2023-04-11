@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./CSS/sweet.css">
+
+
+    <link rel="stylesheet" href="./CSS/main.css">
+    <script src="./JS/main.js" defer></script>
+</head>
+<body>
+    <div class="menucontainer">
+        <h1 class="title"><span class="tic">Tic</span>  Tac <span class="toe">Toe</span> </h1>
+        <p>Pick your poison</p>
+        <div>
+            <button class="btn" id="pvp">Player vs Player</button>
+            <button class="btn" id="pvc">Player vs Computer</button>
+        </div>
+    </div>
+
+    <div class="boardscene">
+        <nav>
+            <button id="returnhome">Return</button>
+            <button id="historymodal">History</button>
+        </nav>
+        <div class="mainboard">
+            <div class="box" onclick="panelclick(this.id)" id="p00"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p01"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p02"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p10"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p11"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p12"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p20"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p21"></div>
+            <div class="box" onclick="panelclick(this.id)" id="p22"></div>
+        </div>
+        <div class="btns">
+            <button id="prev">
+                Previous
+            </button>
+            <button id="reset">
+                Reset
+            </button>
+            <button id="next">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="msg">Player 1 Wins</div>
+        <p id="comment">Well played</p>
+    </div>
+
+    <div id="historymodule">
+        <div class="historycontainer">
+            <h1>History</h1>
+            <ul class="historylist">
+                
+            </ul>
+            <div class="btnclear">
+                <button  id="clearhistory">Clear</button>
+            </div>
+            <div class="closebtn">
+                X
+            </div>
+        </div>
+    </div>
+</body>
+</html>
